@@ -1,6 +1,5 @@
---[[
--- foole
---]]
+--@fooleg
+
 require "printv"
 
 local zte = {}
