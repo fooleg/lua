@@ -175,10 +175,11 @@ end
 
 function spack.byte_str(stream)
   byte_array = {}
-  for i = 1, string.len(stream) do
+  local len = string.len(stream)
+  for i = 1, len do
     byte_array[i] = string.byte(string.sub(stream,i,i))
   end
-  return table.concat(byte_array,",")
+  return table.concat(byte_array,","), len
 end
 
 SPackWriter = {}
