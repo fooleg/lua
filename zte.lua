@@ -82,6 +82,8 @@ function zte.loadstring(template, start_tag, end_tag, tmpl_name)
   -- compile it to lua code
   template = string.gsub(template,"}#\n","}#")
   template = string.gsub(template,"}#\r\n","}#")
+  template = string.gsub(template,"}# \n","}#\n")
+  template = string.gsub(template,"}# \r\n","}#\r\n")
   local lua_code = {}
 
   start_tag = start_tag or '#{'
